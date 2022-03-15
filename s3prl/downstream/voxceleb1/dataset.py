@@ -48,6 +48,7 @@ class SpeakerClassifiDataset(Dataset):
 
         y = []
         for path in train_path_list:
+            path = path.replace('\\', '/')
             id_string = path.split("/")[-3]
             y.append(int(id_string[2:]) - 10001)
 
